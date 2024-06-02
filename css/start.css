@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Fira sans", sans-serif;
+}
+
+:root {
+    --dark-green: #002925;
+    --green: #004740;
+    --orange: #ff7c2f;
+    --light: #FFFFFF;
+    --grey: #bed8c6;
+    --font-lg: 1.2rem;
+    --red: #b90025;
+    --primary: #b2dfdb ;
+    --secondary: #4db6ac ;
+    --title: #396d67  ;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--green);
+    color: var(--secondary);
+    letter-spacing: 1px;
+    padding: 2rem 1rem;
+}
+
+body1 {
+    background:#bed8c6 ;
+}
+
+header {
+    max-width: 800px;
+    width: 100%;
+    margin: 1rem auto 1.5rem auto;
+    text-align: center;
+}
+
+header1 {
+    width: 100px; 
+    height: 80px;
+    background: #bed8c6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #396d67;
+
+}
+.space {
+    display: none;
+}
+
+.nav-bar{
+    margin-left: 1050px;
+    display: block;
+    
+}
+.nav-bar ul li a{
+    display: block;
+    color:#bed8c6;
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar :hover {
+color:#396d67;
+background:#bed8c6;
+}
+
+.nav-bar ul li a.active {
+    color:#396d67 ;
+    background:#bed8c6 ;
+}
+
+header h1 {
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+#switch {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--grey);
+    text-shadow: 1px 3px 1px var(--dark-green);
+}
+
+#task-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem 0 1rem 0;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#task-input {
+    flex: 1 1 0%;
+    padding: 0.75rem 0.5rem;
+    background-color: var(--dark-green);
+    color: var(--light);
+    border: 1px solid var(--grey);
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#task-input::placeholder {
+    color: var(--grey);
+}
+
+@media (min-width: 768px) {
+    #task-input {
+        font-size: var(--font-lg);
+    }
+}
+
+#task-submit {
+    color: var(--primary);
+    font-weight: 600;
+    border: 1px solid var(--grey);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#task-submit:hover {
+    opacity: 0.8;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem 0;
+}
+
+.task-list h2 {
+    font-weight: 400;
+    letter-spacing: normal;
+    margin-bottom: 0.5rem;
+}
+
+#tasks {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#tasks .task {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: var(--dark-green);
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 1000px) {
+    #tasks .task {
+        padding: 1rem 2rem;
+    }
+}
+
+.task .content {
+    flex: 1 1 0%;
+}
+
+.task .content .text {
+    color: var(--light);
+    padding-top: 0.5rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+    border-bottom: 1px solid var(--grey);
+    color: var(--grey);
+}
+
+@media (min-width: 768px) {
+    .text {
+        font-size: var(--font-lg);
+    }
+}
+
+.task .counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0.2rem;
+}
+
+@media (min-width: 768px) {
+    .text .time {
+        font-size: var(--font-lg);
+    }
+}
+
+.task .counter .controls button {
+    background-color: var(--orange);
+    color: var(--light);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    margin-right: 0.25rem;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.task .counter .controls button:hover {
+    opacity: 0.8;
+}
+
+.task .actions {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.task .actions button {
+    color: var(--light);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.task .actions .edit, .download {
+    border: 1px solid var(--light);
+}
+
+.task .actions .delete {
+    background-color: var(--red);
+    border: 1px solid var(--red);
+}
+
+.actions button:hover {
+    opacity: 0.8;
+}
+
+@media (min-width: 1000px) {
+    button {
+        font-weight: 600;
+    }
+
+    .counter .controls {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .controls button {
+        padding: 1rem 2rem;
+    }
+
+    .task .actions {
+        gap: 1rem;
+    }
+
+    .actions button {
+        padding: 1.5rem 2.2rem;
+    }
+}
+
+/* nav */
+
+.nav-start {
+    text-align: center;
+    font-family: "Avenir Next", sans-serif;;
+    font-weight: 700;
+    background-color: transparent !important;
+    color: var(--light) !important;
+    margin-bottom: 2rem;
+}
+
+.nav-start:hover {
+    color: coral !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* music */
+.box {
+display: flex;
+justify-content: center;
+}
+
+.music {
+    position: relative;
+    width: 480px;
+    height: 200px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    padding: 2px;
+}
+
+/* left side */
+.music-list {
+    flex-basis: 15%;
+    height: 20px;
+    background-color: var(--primary);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+}
+
+/* right side */
+.music-play {
+    display: flex;
+    flex-basis: 85%;
+    height: 40px;
+    background-color: var(--secondary);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 98px;
+    margin-top: 50px;
+}

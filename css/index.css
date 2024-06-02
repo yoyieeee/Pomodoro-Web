@@ -1,0 +1,75 @@
+*{margin: 0;
+    padding: 0;
+    font-family: 'Century Gothic', sans-serif;
+    box-sizing: border-box;
+  }
+
+  :root{
+    --primary: #b2dfdb ;
+    --secondary: #4db6ac ;
+    --title: #396d67  ;
+  }
+  body {
+    background:linear-gradient(#b2dfdb, #4db6ac, #396d67 );
+  }
+  
+  .card{
+    width: 800px ;
+    max-width: 1000px;
+    max-height: 10000px;
+    background:transparent;
+    color: #ffffff;
+    margin: 100px 350px;
+    padding: 40px 35px ;
+    text-align: center;
+    height: 790px;
+    border-color:linear-gradient(#b2dfdb, #4db6ac, #396d67 );
+    margin-right: -20px;
+    margin-left: 400px;
+  }
+
+  .pomo-icon{
+    width: 230px;
+    margin-bottom: 20px;
+  }
+
+  .proceed {
+    color: #eeeeee00;
+    font-size: 1000px;
+    font-weight: 900;
+    margin-bottom: 1000px;
+    border: 0;
+    outline: 1px;
+    border-radius: 0%;
+    width: 10000px;
+    height: 1000px;
+    cursor: pointer;
+    margin-left: -1000px;
+    margin-top: -770px;
+  }
+
+  .click{
+      text-align: center;
+      font-size: 20px;
+      margin-top: 50px;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 0.5em 0.5em;
+      color:var(--title);
+      background-color: var(--primary);
+      border: 10px solid var(--secondary);
+      border-radius: 5px;
+      
+      transition-property:  transform;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+  }
+
+  .click:hover{
+    transform: translateY(-10px);
+    background-color: var(--title);
+    color: var(--primary);
+    cursor: pointer;
+  }
+
